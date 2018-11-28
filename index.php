@@ -46,11 +46,11 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
             <div class="col-md-3">  
                 <br/><br/>              
                 <div class="col-md-6">
-                    <img src="/images/new-moon.png" style="max-width: 100px;"/><br/>
+                    <img src="/images/NewMoon.png" style="max-width: 100px;"/><br/>
                     <h4><?=$moon->get_next_new_moon_time()?></h4>
                 </div>
                 <div class="col-md-6">
-                    <img src="/images/full-moon.png" style="max-width: 100px;"/><br/>
+                    <img src="/images/FullMoon.png" style="max-width: 100px;"/><br/>
                     <h4><?=$moon->get_next_full_moon_time()?></h4>
                 </div>
             </div>
