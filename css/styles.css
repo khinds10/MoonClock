@@ -1,0 +1,41 @@
+
+body {
+    height: 800px;
+    width: 1280px;
+    background: black;
+    color:white;
+    padding: 10px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+td {
+    padding: 2px;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+#time {
+    padding: 0;
+    margin: 0;
+    font-size: 305px;
+    font-weight: bold;
+    margin-top: -35px;
+}
+
+#temp {
+    padding: 0;
+    margin: 0;
+    font-size: 230px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
