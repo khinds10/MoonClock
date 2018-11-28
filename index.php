@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/New_York');
 include 'classes/moon.php';
 include 'classes/sun.php';
 include 'settings/settings.php';
