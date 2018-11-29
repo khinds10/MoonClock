@@ -26,7 +26,7 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
     </head>
     <body onload="startTime()">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-sm-5">
                 <img src="/images/Earth/<?=$sun->getEarthFromSun()?>"/>
                 <?php
                     if ($sun->importantDateDaysleft > 0) {
@@ -40,27 +40,27 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
                  }
                 ?>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 <img src="/images/Moon/<?=$moon->phase_image()?>"/>                
                 <h3 class="nowrap"><?=round( $moon->age() )?> day old <?=$moon->phase_name()?></h3>
             </div>
-            <div class="col-md-3">  
+            <div class="col-sm-3">  
                 <br/><br/>              
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <img src="/images/NewMoon.png" style="max-width: 100px;"/><br/>
                     <h4><?=$moon->get_next_new_moon_time()?></h4>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <img src="/images/FullMoon.png" style="max-width: 100px;"/><br/>
                     <h4><?=$moon->get_next_full_moon_time()?></h4>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <h1 id="time"></h1>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <h1 id="temp" class="pull-right" style="color: <?=$tempColor?>"><?=$currentTemperature?>&deg;</h1>
                 <h3 style="position: absolute; bottom: 0px; right: 10px;">High: <span style="color: <?=$tempHighColor?>"><?=$todaysHigh?>&deg;</span> <?=$todaysHighTime?></h3>
             </div>
