@@ -1,5 +1,5 @@
 body {
-    height: 601px;
+    height: 580px;
     width: 962px;
     background: black;
     color:white;
@@ -50,7 +50,7 @@ h3 {
 #time {
     padding: 0;
     margin: 0;
-    font-size: 225px;
+    font-size: 205px;
     font-weight: bold;
     margin-top: -35px;
 }
@@ -63,7 +63,7 @@ h3 {
 #temp {
     padding: 0;
     margin-top: -30px;
-    font-size: 163px;
+    font-size: 150px;
     font-weight: bold;
     margin-bottom: 40px;
 }
@@ -77,7 +77,7 @@ h3 {
 
 #today-high-temp {
     position: absolute;
-    bottom: 12px;
+    bottom: 14px;
     right: 10px;
 }
 
