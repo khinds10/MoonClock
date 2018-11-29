@@ -23,15 +23,17 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js"></script>
+       <link rel="apple-touch-icon" href="/images/Icons/apple-touch-icon.png">
+       <link rel="icon" href="/images/Icons/favicon.ico" type="image/x-icon" />
     </head>
     <body onload="startTime()">
         <div class="row">
             <div class="col-sm-5">
-                <img src="/images/Earth/<?=$sun->getEarthFromSun()?>"/>
+                <img id="earth-image" src="/images/Earth/<?=$sun->getEarthFromSun()?>"/>
                 <?php
                     if ($sun->importantDateDaysleft > 0) {
                 ?>
-                    <h1 class="nowrap"><img src="/images/<?=$sun->getImportantDateImage()?>.png" style="max-height: 75px;"/> <?=$sun->importantDateName?> <?=$sun->importantDateDaysleft?> <?=$sun->importantDateUnit?></h1>
+                    <h1 class="nowrap"><img src="/images/<?=$sun->getImportantDateImage()?>.png" class="important-date-image"/> <?=$sun->importantDateName?> <?=$sun->importantDateDaysleft?> <?=$sun->importantDateUnit?></h1>
                 <?php
                  } else {
                 ?>
@@ -41,18 +43,25 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
                 ?>
             </div>
             <div class="col-sm-4">
-                <img src="/images/Moon/<?=$moon->phase_image()?>"/>                
-                <h3 class="nowrap"><?=round( $moon->age() )?> day old <?=$moon->phase_name()?></h3>
+                <img src="/images/Moon/<?=$moon->phase_image()?>" class="moon-image-large"/>                
+                <h3 class="nowrap"><?=round( $moon->age() )?> day old <br/> <span class="padding-left"><?=$moon->phase_name()?></span></h3>
             </div>
-            <div class="col-sm-3">  
-                <br/><br/>              
-                <div class="col-sm-6">
-                    <img src="/images/NewMoon.png" style="max-width: 100px;"/><br/>
-                    <h4><?=$moon->get_next_new_moon_time()?></h4>
+            <div class="col-sm-3" class="padding-top">  
+                <div class="col-sm-12">
+                    <div id="dateBox">
+                        <div class="dateBoxText"><?=date("D");?></div>
+                        <div class="dateBoxText"><?=date("j");?></div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <img src="/images/FullMoon.png" style="max-width: 100px;"/><br/>
-                    <h4><?=$moon->get_next_full_moon_time()?></h4>
+                <div class="col-sm-12 no-margin-padding">
+                    <div class="col-sm-6 text-center no-margin-padding">
+                        <img src="/images/NewMoon.png" class="moon-image padding-top"/>
+                        <h4><?=$moon->get_next_new_moon_time()?></h4>
+                    </div>
+                    <div class="col-sm-6 text-center no-margin-padding">
+                        <img src="/images/FullMoon.png" class="moon-image padding-top"/>
+                        <h4><?=$moon->get_next_full_moon_time()?></h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,7 +71,7 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
             </div>
             <div class="col-sm-6">
                 <h1 id="temp" class="pull-right" style="color: <?=$tempColor?>"><?=$currentTemperature?>&deg;</h1>
-                <h3 style="position: absolute; bottom: 0px; right: 10px;">High: <span style="color: <?=$tempHighColor?>"><?=$todaysHigh?>&deg;</span> <?=$todaysHighTime?></h3>
+                <h3 id="today-high-temp">High: <span style="color: <?=$tempHighColor?>"><?=$todaysHigh?>&deg;</span> <?=$todaysHighTime?></h3>
             </div>
         </div>        
     </body>

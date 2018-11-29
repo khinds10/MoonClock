@@ -1,14 +1,10 @@
-
 body {
     height: 601px;
     width: 962px;
     background: black;
     color:white;
     padding: 10px;
-}
-
-.nowrap {
-    white-space: nowrap;
+    overflow:hidden;
 }
 
 td {
@@ -17,6 +13,8 @@ td {
 }
 
 h1 {
+    margin:0;
+    padding:0;
     font-size: 70px;
 }
 
@@ -24,18 +22,77 @@ h3 {
     font-size: 40px;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
+.no-margin-padding {
+    padding: 0; 
+    margin: 0;
+}
+
+.padding-top {
+    padding-top: 20px;
+}
+
+.padding-left {
+    padding-left: 25px;
+}
+
+.important-date-image {
+    max-height: 75px;
+}
+
+.text-center {
+    font-align:center;
+}
+
 #time {
     padding: 0;
     margin: 0;
-    font-size: 305px;
+    font-size: 225px;
     font-weight: bold;
     margin-top: -35px;
 }
 
+#earth-image {
+    max-width: 350px; 
+    padding-top:10px;
+}
+
 #temp {
     padding: 0;
-    margin: 0;
-    font-size: 230px;
+    margin-top: -30px;
+    font-size: 163px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+#dateBox {
+    margin-top: 0;
+    text-align: center;
+    background-color: rgba(255,255,255,.7);
+    margin-right: -40px;
+}
+
+#today-high-temp {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+}
+
+.dateBoxText {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.moon-image {
+    max-width: 100px;
+}
+
+.moon-image-large {
+    max-width: 200px;
 }
