@@ -1,6 +1,8 @@
 # MoonClock
 Tablet Powered Magic Mirror Clock showing the Moon / Earth and current outside conditions.
 
+![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_195812.jpg)
+
 ## Installation
 
 **Clone the project on a LAMP enabled webserver, (PHP/Apache).**
@@ -40,15 +42,42 @@ If you wish to have your temperatures color coded, more red for hot outside, mor
 *// temperature color API*
 *$temperatureColorAPI = 'http://my-temperature.api.net';*
 
+### **Supplies Needed**
+
+Old Tablet
+
+![Tablet](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/tablet.jpg)
+
+Picture frame large enough to surround the tablet completely inside
+
+![Picture Frame](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/picture-frame.png)
+
+2 Way Mirror size cut to fit the frame
+
+![2 Way Mirror](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/2-way-mirror.png)
+
+Thin piece of wood, cut to the same HxW of the picture frame itself. This will be attached to the back of the entire picture frame, holding the tablet inside like it's inside of a thin box.
+
+![Thin Wood](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/wood.png)
+
+
 ### **Constructing the Project**
 
-images here
+For good measure, paint the back panel (thin piece of wood) of the picture frame black to prevent it showing through the 2 way mirror.
 
+![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_163903.jpg)
 
+Place the 2 way mirror in front of the tablet, I've placed a paint stick (also painted black on the front) to hold up the tablet screen higher in the frame to appear more centered.
 
+![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_164006.jpg)
 
+![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_175934.jpg)
 
+### FINISHED
 
+Screw the back panel (thin piece of wood) on the painting, Hang on the wall with USB power nearby:
+
+![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_195801.jpg)
 
 ## A PHP class for calculating the phase of the Moon  
 
