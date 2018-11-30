@@ -75,6 +75,10 @@ Place the 2 way mirror in front of the tablet, I've placed a paint stick (also p
 
 ### FINISHED
 
+On the tablet itself install a "kiosk style" browser application, one that's meant to keep the same page displayed for long periods of time.  It should also keep the screen on, so it doesn't turn off due to inactivity when it's inside the frame.
+
+Point the kiosk browser app to your created new website above.
+
 Screw the back panel (thin piece of wood) on the painting, Hang on the wall with USB power nearby:
 
 ![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_195801.jpg)
