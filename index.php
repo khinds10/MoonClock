@@ -7,7 +7,7 @@ $moon = new Moon();
 $sun = new Sun();
 
 // get current temperature and current daily high
-$currentConditions = json_decode(cURL("{$weatherAPIURL}/"));
+$currentConditions = json_decode(cURL($weatherAPIURL . $weatherAPIKey . '/' . $latitude . ',' . $longitude . '?lang=en'));
 $currentTemperature = round($currentConditions->currently->apparentTemperature);
 $todaysHigh = round($currentConditions->daily->data[0]->apparentTemperatureHigh);
 $todaysHighTime = date("g:i a", $currentConditions->daily->data[0]->temperatureHighTime);
