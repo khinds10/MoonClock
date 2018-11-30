@@ -13,34 +13,34 @@ $ git clone https://github.com/khinds10/MoonClock.git
 
 **Apache2 Configuration File**
 
-<VirtualHost *:80>
-	ServerName moon.myserver.com
-	ServerAlias moon.myserver.com
-	ServerAdmin admin@moon.myserver.com
-	DocumentRoot /var/www/MoonClock
-	<Directory /var/www/MoonClock>
-		Options FollowSymLinks
-		AllowOverride All
-		Require all granted
-	</Directory>
-</VirtualHost>
+	<VirtualHost *:80>
+		ServerName moon.myserver.com
+		ServerAlias moon.myserver.com
+		ServerAdmin admin@moon.myserver.com
+		DocumentRoot /var/www/MoonClock
+		<Directory /var/www/MoonClock>
+			Options FollowSymLinks
+			AllowOverride All
+			Require all granted
+		</Directory>
+	</VirtualHost>
 
 **Configure Application Settings**
 
 In the settings/ folder of the project copy the *settings.shadow.php* to *settings.php*, adjust the php values accordingly to match your local configuration.
 
-*// weather API*
-*$weatherAPIURL = 'http://api.forecast.io/';*
-*$weatherAPIKey = 'MY API KEY HERE';*
-*$latitude = '42.512000';*
-*$longitude = '-71.151510';*
+	// weather API*
+	$weatherAPIURL = 'http://api.forecast.io/';
+	$weatherAPIKey = 'MY API KEY HERE';
+	$latitude = '42.512000';
+	$longitude = '-71.151510';
 
 **Special Feature**
 
 If you wish to have your temperatures color coded, more red for hot outside, more blue for cold outside, you can create and point this application at the following GitHub URL: https://github.com/khinds10/TemperatureAPI and assign the newly created URL to the following PHP value
 
-*// temperature color API*
-*$temperatureColorAPI = 'http://my-temperature.api.net';*
+	// temperature color API
+	$temperatureColorAPI = 'http://my-temperature.api.net';
 
 ### **Supplies Needed**
 
