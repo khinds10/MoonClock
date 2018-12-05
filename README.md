@@ -13,34 +13,34 @@ $ git clone https://github.com/khinds10/MoonClock.git
 
 **Apache2 Configuration File**
 
-<VirtualHost *:80>
-	ServerName moon.myserver.com
-	ServerAlias moon.myserver.com
-	ServerAdmin admin@moon.myserver.com
-	DocumentRoot /var/www/MoonClock
-	<Directory /var/www/MoonClock>
-		Options FollowSymLinks
-		AllowOverride All
-		Require all granted
-	</Directory>
-</VirtualHost>
+	<VirtualHost *:80>
+		ServerName moon.myserver.com
+		ServerAlias moon.myserver.com
+		ServerAdmin admin@moon.myserver.com
+		DocumentRoot /var/www/MoonClock
+		<Directory /var/www/MoonClock>
+			Options FollowSymLinks
+			AllowOverride All
+			Require all granted
+		</Directory>
+	</VirtualHost>
 
 **Configure Application Settings**
 
 In the settings/ folder of the project copy the *settings.shadow.php* to *settings.php*, adjust the php values accordingly to match your local configuration.
 
-*// weather API*
-*$weatherAPIURL = 'http://api.forecast.io/';*
-*$weatherAPIKey = 'MY API KEY HERE';*
-*$latitude = '42.512000';*
-*$longitude = '-71.151510';*
+	// weather API*
+	$weatherAPIURL = 'http://api.forecast.io/';
+	$weatherAPIKey = 'MY API KEY HERE';
+	$latitude = '42.512000';
+	$longitude = '-71.151510';
 
 **Special Feature**
 
 If you wish to have your temperatures color coded, more red for hot outside, more blue for cold outside, you can create and point this application at the following GitHub URL: https://github.com/khinds10/TemperatureAPI and assign the newly created URL to the following PHP value
 
-*// temperature color API*
-*$temperatureColorAPI = 'http://my-temperature.api.net';*
+	// temperature color API
+	$temperatureColorAPI = 'http://my-temperature.api.net';
 
 ### **Supplies Needed**
 
@@ -74,6 +74,10 @@ Place the 2 way mirror in front of the tablet, I've placed a paint stick (also p
 ![](https://raw.githubusercontent.com/khinds10/MoonClock/master/construction/20181129_175934.jpg)
 
 ### FINISHED
+
+On the tablet itself install a "kiosk style" browser application, one that's meant to keep the same page displayed for long periods of time.  It should also keep the screen on, so it doesn't turn off due to inactivity when it's inside the frame.
+
+Point the kiosk browser app to your created new website above.
 
 Screw the back panel (thin piece of wood) on the painting, Hang on the wall with USB power nearby:
 
