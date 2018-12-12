@@ -44,7 +44,7 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
             </div>
             <div class="col-sm-4">
                 <img src="/images/Moon/<?=$moon->phase_image()?>" class="moon-image-large"/>                
-                <h3 class="nowrap"><?=round( $moon->age() )?> day old <br/> <span class="padding-left"><?=$moon->phase_name()?></span></h3>
+                <h3 class="nowrap"><?=round( $moon->age() )?> day old <br/> <span style="padding-left:10px;"><?=$moon->phase_name()?></span></h3>
             </div>
             <div class="col-sm-3" class="padding-top">  
                 <div class="col-sm-12">
