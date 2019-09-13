@@ -7,7 +7,7 @@ $moon = new Moon();
 $sun = new Sun();
 
 // get current temperature and current daily high
-$currentConditions = json_decode(cURL($weatherAPIURL . $weatherAPIKey . '/' . $latitude . ',' . $longitude . '?lang=en'));
+$currentConditions = json_decode(cURL($weatherAPIURL));
 $currentTemperature = round($currentConditions->currently->apparentTemperature);
 $todaysHigh = round($currentConditions->daily->data[0]->apparentTemperatureHigh);
 $todaysHighTime = date("g:i a", $currentConditions->daily->data[0]->temperatureHighTime);
@@ -23,8 +23,9 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js"></script>
-       <link rel="apple-touch-icon" href="/images/Icons/apple-touch-icon.png">
-       <link rel="icon" href="/images/Icons/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/images/Icons/apple-touch-icon.png">
+        <link rel="icon" href="/images/Icons/favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     </head>
     <body onload="startTime()">
         <div class="row">
