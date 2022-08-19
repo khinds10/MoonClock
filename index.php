@@ -8,7 +8,7 @@ $sun = new Sun();
 
 // get current temperature and current daily high
 $currentConditions = json_decode(cURL($weatherAPIURL));
-$currentTemperature = round($currentConditions->current->feels_like);
+$currentTemperature = round($currentConditions->current->temp);
 $todaysHigh = round($currentConditions->daily[0]->temp->max);
 $tempColor = cURL("{$temperatureColorAPI}/?temperature=" . $currentTemperature);
 $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
@@ -67,7 +67,7 @@ $tempHighColor = cURL("{$temperatureColorAPI}/?temperature=" . $todaysHigh);
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <h1 id="time"></h1>
+                <h1 id="time" style="display:inline"></h1>
             </div>
             <div class="col-sm-6">
                 <h1 id="temp" class="pull-right" style="color: <?=$tempColor?>"><?=$currentTemperature?>&deg;</h1>

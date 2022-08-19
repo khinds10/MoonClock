@@ -85,7 +85,9 @@ h3 {
 }
 
 #ampm {
-    font-size: 140px;
+    font-size: 100px;
+    padding-left: 25px;
+    color: #959380;
 }
 
 .dateBoxText {

@@ -2,13 +2,13 @@
 function startTime() {
     var today = new Date();
     var h = today.getHours();
-
-
+    
     var ampm = 'AM';
     if (h > 12) {
-	h = h - 12;
-	ampm = 'PM';
+	    h = h - 12;
+	    ampm = 'PM';
     }
+    
     var m = today.getMinutes();
     var s = today.getSeconds();
     m = checkTime(m);
